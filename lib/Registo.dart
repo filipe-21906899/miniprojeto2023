@@ -156,6 +156,9 @@ class _RegistoState extends State<Registo> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('A avaliação foi registada com sucesso.')),
                     );
+
+                    _disciplinaController.clear();
+                    _observacoesController.clear();
                     Navigator.push(context, MaterialPageRoute(builder: (context){
                       return lista(data: data);
                     }));
